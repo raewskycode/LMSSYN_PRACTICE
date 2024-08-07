@@ -43,7 +43,6 @@ def register():
     return render_template('index.html', msg=msg)
 
 # Вход
-# Вход
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     msg = ''
