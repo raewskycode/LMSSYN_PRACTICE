@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Личный кабинет</h1>
+        <p>Добро пожаловать, {{ name }}</p>
+        <a href="/logout" class="btn btn-secondary">Выйти</a>
+        <h2>Заметка</h2>
+        <form method="POST" action="/save_note">
+            <textarea class="form-control" id="note" name="note" rows="5">{{ note }}</textarea>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
+    </div>
+</body>
+</html>
